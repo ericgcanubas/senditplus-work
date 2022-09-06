@@ -1,0 +1,82 @@
+
+.bg-custom{
+    background-color:  rgb(53, 161, 228);
+
+}
+.bg-background{
+    background-image: url('../assets/img/bk.png');
+    height: 500px; /* You must set a specified height */
+    background-position:top; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+.intro-title{
+    font-size:90px;
+}
+.txt_shadow{
+    text-shadow: 2px 2px #000;
+}
+.txt_shadow_w{
+    text-shadow: 1px 1px #fff;
+}
+.bg-custom_side{
+    background-color:  rgb(44, 135, 209);
+
+}
+.sb-nav-link-icon{
+    color:white;
+}
+
+@font-face {
+    font-family: "CustomFont";
+    src: url("../assets/fonts/Roboto-Regular.ttf");
+    src: url("../assets/fonts/Roboto-Bold.ttf") format("ttf");
+
+    }
+    .title_font {
+        font-family: 'CustomFont', Arial, sans-serif;
+        font-weight:normal;
+        font-style:normal;
+        }
+
+        .nav-link{
+            font-family: 'CustomFont', Arial, sans-serif;
+            font-weight:normal;
+            font-style:normal; 
+        }
+
+        .btn-circle.btn-sm {
+            width: 30px;
+            height: 30px;
+
+            border-radius: 15px;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .one-half {
+            color:#fff;
+            font-size:115%;
+            font-weight:500;
+            height:100px;
+            text-align:center;
+            }
+
+            .trans:before,.ack:before,.reject:before,.mo:before,.mobile:before,.paper:before,.refresh:before {
+                position: absolute;
+                font-family: 'FontAwesome';
+                font-size:80px;
+                top: 0;
+                left: 10px;
+                color:#fff;
+                opacity:.2;
+                }
+
+            .trans:before { content: "\f019"; }
+            .ack:before { content: "\f00c"; }
+            .reject:before { content: "\f00d"; }
+            .mo:before { content: "\f021"; }
+            .mobile:before{ content: "\f10b";}   
+            .paper:before{ content: "\f1d8";}  
+            .refresh:before{ content: "\f200";}  
+            
