@@ -84,7 +84,6 @@ class RoleController extends Controller
 
                 if($Permission->id == $name){
 
-
                     $IsExist = false;
                     foreach($rolePermissionExist as $exist){
                         if  ( $exist->permission_id == $name ){
