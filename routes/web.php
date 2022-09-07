@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SubscriptionController;
+use App\Http\Controllers\BranchController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -69,4 +70,8 @@ Route::middleware(['auth'])->group(function()
     Route::post('/profile/change-password',[UserController::class,'update_password'])->name('changePasswordPost');
     Route::post('/profile/avatar',[UserController::class,'update_avatar']);
 
+    // branch routes
+    Route::get('/branch',[BranchController::class, 'index'])->name('branch.branch');
+    Route::get('/br_create',[BranchController::class, 'create']);
+    Route::get('/br_edit',[BranchController::class, 'edit']);
 });

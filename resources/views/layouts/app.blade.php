@@ -112,14 +112,24 @@
                                     <div class="sb-nav-link-icon text-white"><i class="fa fa-tachometer"></i></div>
                                     Dashboard
                                 </a>
+                                <a class="nav-link collapsed text-white" href="#" data-bs-toggle="collapse" data-bs-target="#collapseRole" aria-expanded="false" aria-controls="collapsePages">
+                                        <div class="sb-nav-link-icon text-white"><i class="fa fa-user"></i></div>
+                                        Branch
+                                        <div class="sb-sidenav-collapse-arrow text-white"><i class="fa fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse bg-secondary" id="collapseRole" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                        <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                         <a class="nav-link text-white" href="{{url('branch')}}">Branch</a>
+                                         <a class="nav-link text-white" href="{{url('br_create')}}">Create Branch</a>
+                                        </nav>
+                                    </div>
 
-
-                                    <a class="nav-link collapsed text-white" href="#" data-bs-toggle="collapse" data-bs-target="#collapseRole" aria-expanded="false" aria-controls="collapsePages">
+                                    <a class="nav-link collapsed text-white" href="#" data-bs-toggle="collapse" data-bs-target="#collapseRole1" aria-expanded="false" aria-controls="collapsePages">
                                         <div class="sb-nav-link-icon text-white"><i class="fa fa-user"></i></div>
                                         Access Management
                                         <div class="sb-sidenav-collapse-arrow text-white"><i class="fa fa-angle-down"></i></div>
                                     </a>
-                                    <div class="collapse bg-secondary" id="collapseRole" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                    <div class="collapse bg-secondary" id="collapseRole1" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                          <a class="nav-link text-white" href="/subscription">Subscription</a>
                                          <a class="nav-link text-white" href="/role">Roles</a>
@@ -132,7 +142,7 @@
                                     <div class="sb-nav-link-icon text-white"><i class="fa fa-users"></i></div>
                                     Subscription
                                 </a>
-                                <a class="nav-link text-white" href="branch.php ">
+                                <a class="nav-link text-white" href="{{url('branch')}}">
                                     <div class="sb-nav-link-icon text-white"><i class="fa fa-location-arrow"></i></div>
                                     Branch
                                 </a>
