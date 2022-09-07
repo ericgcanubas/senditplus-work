@@ -35,7 +35,7 @@
                                 <th>Subscription Type</th>
                                 <th>Status</th>
                                 <th>Username</th>
-                                <th>Role</th>
+                                <th>Roles</th>
                                 <th style="width: 10%;">Action</th>
                     </tr>
                 </thead>
@@ -48,7 +48,7 @@
                                 <th>Subscription Type</th>
                                 <th>Status</th>
                                 <th>Username</th>
-                                <th>Role</th>
+                                <th>Roles</th>
                                 <th style="width: 10%;">Action</th>
                     </tr>
                 </tfoot>
@@ -70,9 +70,15 @@
                                 <span class="badge badge-sm bg-danger">Inactive</span>
                                 @endif  </td>
                                 <td>{{$user->username}}</td>
-                                <td></td>
+                                <td><a href="subscription/roles-setup/{{$user->id}}" class="btn btn-sm btn-success w-100">
+                                    @if($user->display == null)
+                                       Setup
+                                    @else
+                                    {{$user->display}}
+                                    @endif
+                                </a></td>
                                 <td>
-                                    <a href='#' class="btn btn-warning  btn-sm m-b-10 m-l-5 " ><i class="fa fa-edit"></i>&nbsp; Status</a>
+                                    <a href='subscription/status/{{$user->id}}' class="btn btn-warning  btn-sm m-b-10 m-l-5 " ><i class="fa fa-edit"></i>&nbsp; Status</a>
                                     <a href='manage_subscription.php' class="btn btn-primary  btn-sm m-b-10 m-l-5 "><i class="fa fa-wrench"></i>&nbsp; Credentials</a>
                                 </td>
                             </tr>

@@ -39,7 +39,6 @@
 
                                 <th class="col-10">Permission</th>
                                 <th class="col-2"></th>
-
                             </tr>
                         </tfoot>
 
