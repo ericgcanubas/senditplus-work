@@ -7,7 +7,7 @@
 <div class="container-fluid px-4">
     <h1 class="mt-4 text-primary">Subscription </h1>
     <div class=" col-xs-8 col-lg-8 text-left">
-        <h4>{{ $subscription->firstname . ' '. $subscription->lastname}}</h4>
+        <h6>{{ $subscription->firstname . ' '. $subscription->lastname}}</h6>
     </div>
     <ol class="breadcrumb mb-2">
      <li class="breadcrumb-item active h5"></li>

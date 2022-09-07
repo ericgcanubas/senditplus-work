@@ -1,4 +1,6 @@
 @extends('layouts.new-app')
+
+@section('content')'
 <div class="container " style="margin-left:0px;z-index:999999;">
     <div class="row" style="margin-left:0px;">
         <div class="xs-hidden" style="float:left;margin-top:50px;margin-left:0px;">
@@ -6,7 +8,7 @@
         </div>
     </div>
 </div>
-@section('content')
+
 <style>
     .disabled {
     pointer-events:none; //This makes it not clickable

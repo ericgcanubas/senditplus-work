@@ -16,9 +16,11 @@ use App\Http\Controllers\SubscriptionController;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-});
+// Route::get('/', function () {
+//     return view('auth.login');
+// });
+
+Route::get('/', [UserController::class, 'intro'])->name('intro');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -62,9 +64,9 @@ Route::middleware(['auth'])->group(function()
 
     Route::get('subscription', [SubscriptionController::class,'index']);
     Route::get('subscription/roles-setup/{id}', [SubscriptionController::class,'show']);
-    Route::get('subscription/roles-setup/{id}', [SubscriptionController::class,'show']);
     Route::post('subscription/roles-setup/{id}', [SubscriptionController::class,'modify_roles']);
-
+    Route::get('subscription/status/{id}', [SubscriptionController::class,'show_status']);
+    Route::post('subscription/status/{id}', [SubscriptionController::class,'modify_status']);
 
     Route::get('/profile',[UserController::class,'profile'])->name('user.profile');
     Route::get('/profile/edit',[UserController::class,'index']);

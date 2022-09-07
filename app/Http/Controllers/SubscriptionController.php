@@ -55,6 +55,20 @@ class SubscriptionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function show_status($id)
+    {
+        $subscription= user::find($id);
+
+        return view("subscription.status",compact('subscription'));
+    }
+    public function modify_status(Request $request, $id)
+    {
+        //
+        $status_id = $request->status_id;
+            DB::update('update users set status = '.$status_id.' where id = ?', [$id]);
+        return redirect()->back();
+
+    }
     public function show($id)
     {
         $subscriptions =  DB::table('users')

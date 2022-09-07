@@ -78,7 +78,7 @@
                                     @endif
                                 </a></td>
                                 <td>
-                                    <a href='#' class="btn btn-warning  btn-sm m-b-10 m-l-5 " ><i class="fa fa-edit"></i>&nbsp; Status</a>
+                                    <a href='subscription/status/{{$user->id}}' class="btn btn-warning  btn-sm m-b-10 m-l-5 " ><i class="fa fa-edit"></i>&nbsp; Status</a>
                                     <a href='manage_subscription.php' class="btn btn-primary  btn-sm m-b-10 m-l-5 "><i class="fa fa-wrench"></i>&nbsp; Credentials</a>
                                 </td>
                             </tr>

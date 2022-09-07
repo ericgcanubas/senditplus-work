@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 use App\Models\user;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
 use Hash;
 use Auth;
-
+use DB;
 class UserController extends Controller
 {
     /**
@@ -161,5 +162,20 @@ class UserController extends Controller
     {
 
        return view('profile.index');
+    }
+    public function intro(){
+
+       // $superadmin =  DB::table('users')->where('users.username','superadmin')->get();
+
+        if (user::where('username','superadmin')->exists()){
+        }
+        else{
+              user::create(['lastname'=>'min','firstname'=>'ad','company'=>'core-Dev','contact_no'=>'1234','street_address'=>'123','city'=>'123','country'=>'PH','zipcode'=>'999','subscription_type'=>'0','status'=> '0','username'=>'superadmin','email'=>'admin@admin.com','password'=>bcrypt('admin'),'email_verified_at'=> now()]);
+        }
+
+        //Message has been sent to the site administrator. the administrator will review the information that has been submitted and either approve or deny your request. you will receive an email with instructions on what you will need to do next. thans for your patience.
+
+        return view('auth.login');
+
     }
 }
